@@ -1,0 +1,8 @@
+public void postHandle(HttpServletRequest request, HttpServletResponse response, Object handler, ModelAndView modelAndView) throws Exception {
+        System.out.print("t");
+        /*System.out.print("word ");
+        Scanner scanner = new Scanner(System.in);
+        boolean flag;
+        flag = scanner.nextBoolean();
+        if(flag)*/
+            request.setAttribute("name","HQX");
