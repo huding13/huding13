@@ -1,0 +1,14 @@
+
+#define _CRT_SECURE_NO_WARNINGS 1
+ 
+//contact.c
+ 
+//
+#include "contact.h"
+ 
+ 
+// InitContact() --
+void InitContact(Contact* pc)
+{
+	//：
+	assert(pc);
