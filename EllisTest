@@ -1,0 +1,19 @@
+namespace oneModelMultiTable.BackgroundService
+{
+    public class EllisTest : IHostedService, IDisposable
+    {
+        private readonly ILogger<EllisTest> _logger;
+
+        private Timer _timer;
+
+        public EllisTest(ILogger<EllisTest> logger)
+        {
+            _logger = logger;
+        }
+
+        public void Dispose()
+        {
+            _timer?.Dispose();
+        }
+
+
