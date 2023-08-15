@@ -1,0 +1,29 @@
+ return root == NULL ? 0 : (BinaryTreeSize(root->left)+BinaryTreeSize(root->right) + 1);
+}
+ 
+int* preorder(struct TreeNode* root, int* a, int* pi)
+{
+    if (root == NULL)
+    {
+        return;
+    }
+    a[*pi] = root->val;
+    (*pi)++;
+    preorder(root->left, a, pi);
+    preorder(root->right, a, pi);
+}
+ 
+int* preorderTraversal(struct TreeNode* root, int* returnSize)
+{
+    int size = BinaryTreeSize(root);
+    int* a = (int*)malloc(sizeof(int) * size);
+    if (a == NULL)
+    {
+        printf("malloc fail\n");
+        exit(-1);
+    }
+    *returnSize = size;
+    int i = 0;
+    preorder(root,a, &i);
+    return a;
+}
