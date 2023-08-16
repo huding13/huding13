@@ -1,0 +1,9 @@
+docker run -d -p --name nginx01 -v /etc/nginx nginx
+ docker volume ls
+DRIVER    VOLUME NAME
+local     964b8e505f12f65fb23fd21f05cfa9ecd6c2c6b2ca89c0e44f168bb017dfabd6
+[root0124 ~]# docker run -d -p 3344:80 --name nginx02 -v juming-nginx:/etc/nginx nginx
+[root_0124 home]# docker volume ls
+DRIVER    VOLUME NAME
+local     1be3512d772b7af8543c35141d5bbbfe29549dabf0babb7ce8693833387de41d
+local     58ba3799ae59416c2b34d0672dfa848d158006f840bdb28b41ed463ed0a15599
